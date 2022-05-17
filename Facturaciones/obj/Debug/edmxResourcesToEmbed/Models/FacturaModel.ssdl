@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FacturasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Facturas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipo_factura" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="nombre_autor" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="domicilio_comercial" Type="varchar" MaxLength="70" Nullable="false" />
+    <Property Name="cuit" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="leyenda" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="Numero_factura" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="fecha_inicio_actividad" Type="date" />
+    <Property Name="nombre_comprador" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fecha_emicion" Type="date" />
+    <Property Name="fecha_vencimiento" Type="date" />
+  </EntityType>
+  <EntityContainer Name="FacturasModelStoreContainer">
+    <EntitySet Name="Facturas" EntityType="Self.Facturas" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

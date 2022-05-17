@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+    <h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<script src="https://cdnjs.com/libraries/moment.js"></script>
+
+<table class="table">
+    <tr>
+        <th>numero_afiliado</th>
+        <th>numero_evento</th>
+        <th>numero_autorizacion</th>
+        <th>tipo_episodio</th>
+        <th>id_prestador</th>
+        <th>desc_prestador</th>
+        <th>id_efector</th>
+        <th>nombre_efector</th>
+        <th>Seleccionar</th>
+        <th>Detalles</th>
+    </tr>
+    @foreach (var itemFacturable in Model)
+    {
+        <tr>
+            <td>@itemFacturable.numero_afiliado</td>
+            <td>@itemFacturable.numero_evento  </td>
+            <td>@itemFacturable.numero_autorizacion  </td>
+            <td>@itemFacturable.tipo_episodio  </td>
+            <td>@itemFacturable.id_prestador  </td>
+            <td>@itemFacturable.desc_prestador  </td>
+            <td>@itemFacturable.id_efector  </td>
+            <td>@itemFacturable.nombre_efector  </td>
+            <td>
+                <input type="checkbox" />
+            </td>
+            <td>
+                <button type="button">Detalles</button>
+            </td>
+        </tr>
+    }
+</table>
+
+
+    <button type="button">Seleccionar</button>
